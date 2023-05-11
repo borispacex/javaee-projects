@@ -1,0 +1,92 @@
+package com.test;
+
+import java.io.IOException;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.test.modelos.Articulo;
+
+/**
+ * Servlet implementation class Controller
+ */
+@WebServlet("/Controller")
+public class Controller extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	private TestDAO test;
+    
+	// metodo para cargar datos para la conexion con la base de datos
+	@Override
+	public void init() throws ServletException {
+		String jdbcURL = getServletContext().getInitParameter("jdbcURL");
+		String jdbcUserName = getServletContext().getInitParameter("jdbcUserName");
+		String jdbcPassword = getServletContext().getInitParameter("jdbcPassword");
+		
+		try {
+			this.test = new TestDAO(jdbcURL,jdbcUserName,jdbcPassword);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Controller() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String opcion = request.getParameter("opcion");
+		switch (opcion) {
+		case "1":
+			// crear un articulo
+			Articulo a1 = new Articulo(0,"Televisor","Plasma LG 25 pulgadas", 560);
+			if(test.registrar(a1)) {
+				System.out.println("Articulo registrado");
+			} else {
+				System.out.println("Articulo no fue registrado");
+			}
+			break;
+		case "2":
+			// actualizar un articulo
+			Articulo a2 = new Articulo(1,"Televisor actualizado","Plasma LG 25 pulgadas", 560);
+			if(test.editar(a2)) {
+				System.out.println("Articulo actualizado");
+			} else {
+				System.out.println("Articulo no fue actualizado");
+			}
+			break;
+		case "3":
+			// eliminar un articulo
+			Articulo a2 = new Articulo(0,"Televisor actualizado","Plasma LG 25 pulgadas", 560);
+			if(test.editar(a2)) {
+				System.out.println("Articulo actualizado");
+			} else {
+				System.out.println("Articulo no fue actualizado");
+			}
+			break;
+		default:
+			break;
+		}
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

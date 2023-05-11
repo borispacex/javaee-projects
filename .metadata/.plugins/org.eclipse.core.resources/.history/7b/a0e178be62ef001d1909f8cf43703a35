@@ -1,0 +1,13 @@
+package com.test;
+
+import java.sql.SQLException;
+
+public class TestDAO {
+	private Conexion con;
+	
+	public TestDAO(String jdbcURL, String jdbcUserName, String jdbcPassword) throws SQLException {
+		this.con = new Conexion(jdbcURL,jdbcUserName,jdbcPassword);
+		this.con.connection();
+		System.out.println("CONEXION: " + this.con.getJdbcConnection());
+	}
+}

@@ -1,0 +1,10 @@
+package com.test.modelos;
+
+public class Articulo {
+	private int id;
+	private String nombre;
+	private String decripcion;
+	private double precio;
+	
+	
+}

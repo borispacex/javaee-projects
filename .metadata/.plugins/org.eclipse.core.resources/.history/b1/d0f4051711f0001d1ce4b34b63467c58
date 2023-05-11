@@ -1,0 +1,23 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import com.model.Producto;
+
+public class ProductoDAO {
+	private Connection connection;
+	private PreparedStatement statement;
+	private boolean estadoOperacion;
+	
+	// guardar producto
+	public boolean guardar(Producto producto) {
+		
+		return true;
+	}
+	// editar producto
+		public boolean guardar(Producto producto) {
+			
+			return true;
+		}
+}	

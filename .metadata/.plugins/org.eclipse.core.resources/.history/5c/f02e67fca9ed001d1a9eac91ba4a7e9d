@@ -1,0 +1,5 @@
+package interfaces;
+
+public interface Calculadora {
+	public double operation();
+}

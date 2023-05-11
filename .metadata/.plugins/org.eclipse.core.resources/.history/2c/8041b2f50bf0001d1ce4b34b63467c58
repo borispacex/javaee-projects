@@ -1,0 +1,10 @@
+package com.model;
+
+public class Producto {
+	private int id;
+	private String nombre;
+	private double cantidad;
+	private double precio;
+	private date fecha_crear;
+	private date fecha_actualizar;
+}

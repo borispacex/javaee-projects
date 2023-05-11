@@ -1,0 +1,16 @@
+package com.pool;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class Pool {
+	
+	private static BasicDataSource ds =null;
+	
+	public static DataSource getDataSource() {
+		if (ds == null) {
+			ds = new BasicDataSource();
+			ds.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		}
+		return ds;
+	}
+}

@@ -1,0 +1,26 @@
+package com.test;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+public class Conexion {
+	private String jdbcURL;
+	private String jdbcUserName;
+	private String jdbcPassword;
+	
+	private Connection jdbcConnection;
+
+	public Conexion(String jdbcURL, String jdbcUserName, String jdbcPassword) {
+		this.jdbcURL = jdbcURL;
+		this.jdbcUserName = jdbcUserName;
+		this.jdbcPassword = jdbcPassword;
+	}
+	
+	public void connection() throws SQLException {
+		try {
+			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		} catch (ClassNotFoundException e) {
+			throw new SQLException(e);
+		}
+	}
+}

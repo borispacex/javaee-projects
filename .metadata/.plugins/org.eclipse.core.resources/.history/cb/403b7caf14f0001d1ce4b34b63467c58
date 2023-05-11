@@ -1,0 +1,42 @@
+package com.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.model.Producto;
+
+public class ProductoDAO {
+	private Connection connection;
+	private PreparedStatement statement;
+	private boolean estadoOperacion;
+	
+	// guardar producto
+	public boolean guardar(Producto producto) {
+		
+		return true;
+	}
+	// editar producto
+	public boolean editar(Producto producto) {
+			
+		return true;
+	}
+	
+	// eliminar producto
+	public boolean eliminar(int idProducto) {
+			
+		return true;
+	}
+	
+	// obtener lista de productos
+	public List<Producto> obtenerProductos() {
+			
+		return null;
+	}	
+	
+	// obtener lista de productos
+		public Producto obtenerProducto(int idProducto) {
+				
+			return null;
+		}
+}	

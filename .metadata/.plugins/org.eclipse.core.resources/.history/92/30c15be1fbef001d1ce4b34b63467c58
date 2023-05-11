@@ -1,0 +1,19 @@
+package com.pool;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
+public class Pool {
+	
+	private static BasicDataSource ds =null;
+	
+	public static DataSource getDataSource() {
+		if (ds == null) {
+			ds = new BasicDataSource();
+			ds.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			ds.setUsername("borisv");
+			ds.setPassword("borisv");
+			ds.setUrl("jdbc:sqlserver://DESKTOP-V3E5ICQ\\MSSQLSERVERDEV;encrypt=true;trustServerCertificate=true;databaseName=Testjava");
+		}
+		return ds;
+	}
+}

@@ -1,0 +1,62 @@
+package servlets;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class MyServlet
+ */
+@WebServlet("/MyServlet")
+public class MyServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public MyServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Ingresamos al metodo GET"); // mostramos por consola
+		System.out.println("Valor: " + request.getParameter("var1"));
+		System.out.println("Valor: " + request.getParameter("var2"));
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		System.out.println("Ingresamos al metodo POST de MyServlet");
+		String nombre = request.getParameter("nombre");	// guardamos el vamor recibdo del formulario
+		System.out.println("Su nombre es : " + nombre);
+		
+		// tipo Atributo
+		request.setAttribute("name1", nombre); // mandamos variable a la siguiente presentacion
+		// tipo Sesion
+		request.getSession().setAttribute("name2", nombre); // guardar en sesion
+		// tipo Contexto
+		getServletContext().setAttribute("name3", nombre); // dura mientras el servlet
+		
+		RequestDispatcher rd; 
+		rd = request.getRequestDispatcher("/presentacion.jsp");	// nos dirigimos a la pagina de presentacion.jsp
+		rd.forward(request, response);
+		
+		// doGet(request, response);
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.pool;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import javax.sql.DataSource;
+import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+
+public class Pool {
+	
+	private static BasicDataSource ds =null;
+	
+	public static DataSource getDataSource() {
+		if (ds == null) {
+			ds = new BasicDataSource();
+			ds.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+			ds.setUsername("borisv");
+			ds.setPassword("borisv");
+			ds.setUrl("jdbc:sqlserver://DESKTOP-V3E5ICQ\\MSSQLSERVERDEV;encrypt=true;trustServerCertificate=true;databaseName=Testjava");
+			// Definimos el tamaño del pool de conexiones
+			ds.setInitialSize(50);
+			ds.setMaxIdle(10);
+			ds.setMaxIdle(20);
+			ds.setMaxWaitMillis(5000);
+		}
+		return ds;
+	}
+	
+	public static Connection getConexion() throws SQLException{
+		return getDataSource().getConnection();
+	}
+}

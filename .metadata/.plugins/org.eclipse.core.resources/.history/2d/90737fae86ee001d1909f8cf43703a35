@@ -1,0 +1,21 @@
+package com.test;
+
+import java.sql.Connection;
+
+public class Conexion {
+	private String jdbcURL;
+	private String jdbcUserName;
+	private String jdbcPassword;
+	
+	private Connection jdbcConnection;
+
+	public Conexion(String jdbcURL, String jdbcUserName, String jdbcPassword) {
+		this.jdbcURL = jdbcURL;
+		this.jdbcUserName = jdbcUserName;
+		this.jdbcPassword = jdbcPassword;
+	}
+	
+	public void connection() {
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+	}
+}

@@ -1,0 +1,11 @@
+package com.test;
+
+import java.sql.Connection;
+
+public class Conexion {
+	private String jdbcURL;
+	private String jdbcUserName;
+	private String jdbcPassword;
+	
+	private Connection jdbcConnection;
+}

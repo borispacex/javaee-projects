@@ -1,0 +1,19 @@
+INDEX VERSION 1.132+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jdt.core
+3299844056.index
+1489213238.index
+239323359.index
+581029367.index
+3106956.index
+386365285.index
+2345538809.index
+3502715666.index
+3643972920.index
+1604403302.index
+2659948.index
+1865797976.index
+1791208065.index
+2907462264.index
+1209459215.index
+362885261.index
+3748739022.index
+2069789399.index

@@ -1,0 +1,59 @@
+package com.pool;
+
+public class Articulo {
+	private int id;
+	private String nombre;
+	private String decripcion;
+	private double precio;
+	
+	public Articulo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Articulo(int id, String nombre, String decripcion, double precio) {
+		super();
+		this.id = id;
+		this.nombre = nombre;
+		this.decripcion = decripcion;
+		this.precio = precio;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getDecripcion() {
+		return decripcion;
+	}
+
+	public void setDecripcion(String decripcion) {
+		this.decripcion = decripcion;
+	}
+
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+	@Override
+	public String toString() {
+		return "Articulo [id=" + id + ", nombre=" + nombre + ", decripcion=" + decripcion + ", precio=" + precio + "]";
+	}
+	
+	
+}

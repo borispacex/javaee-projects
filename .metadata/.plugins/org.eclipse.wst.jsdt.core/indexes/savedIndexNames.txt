@@ -1,0 +1,10 @@
+INDEX VERSION 1.4+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3299844056.index
+3865061651.index
+3748739022.index
+3106956.index
+2043118872.index
+2069789399.index
+2286319862.index
+2907462264.index
+362885261.index

@@ -1,0 +1,7 @@
+package com.pool;
+
+public class Pool {
+	
+	private static BasicDataSource ds =null;
+
+}

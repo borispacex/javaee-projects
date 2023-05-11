@@ -1,0 +1,9 @@
+package com.test;
+
+public class testDAO {
+	private Conexion con;
+	
+	public testDAO(String jdbcURL, String jdbcUserName, String jdbcPassword) {
+		this.con = new (jdbcURL,jdbcUserName,jdbcPassword);
+	}
+}

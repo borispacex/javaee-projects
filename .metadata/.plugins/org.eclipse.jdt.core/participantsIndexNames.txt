@@ -1,0 +1,11 @@
+INDEX VERSION 1.132
+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3865061651.index
+\PoolConexiones\src\main\java
+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2025270454.index
+\Java-Web\src\main\java
+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2286319862.index
+\JSTL\src\main\java
+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\735116105.index
+\Java_Web\src\main\java
+C:\Users\BORIS\Documents\Projects\Java-projects\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2043118872.index
+\Proyecto-Test-SqlServer\src\main\java
